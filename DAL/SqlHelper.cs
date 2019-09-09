@@ -1,16 +1,13 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
-using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DAL {
-    class SqlHelper {
-        public static string connectionString = ConfigurationManager.ConnectionStrings["MYSQL"].ConnectionString;
-        //public static string connectionString = "server=localhost;port=3306;user=root;password=root;database=test";
+    public class SqlHelper {
+
+        //public static string connectionString = "server=localhost;port=3306;user=root;password=123456;database=test";
+        private static string connectionString = ConfigurationManager.ConnectionStrings["connstr"].ConnectionString;
         /// <summary>
         /// 增加修改删除
         /// </summary>
@@ -72,7 +69,7 @@ namespace DAL {
                     return mySqlCommand.ExecuteScalar();
                 }
                 catch (Exception e) {
-                    Console.WriteLine("出错了:{0}", e.Message);
+                    Console.WriteLine("出错了:{0}", e.Message + connectionString);
                 }
 
                 return null;
