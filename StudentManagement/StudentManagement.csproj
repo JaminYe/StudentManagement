@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddStu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddStu.Designer.cs">
+      <DependentUpon>AddStu.cs</DependentUpon>
+    </Compile>
     <Compile Include="BaseForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,6 +72,15 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Student.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Student.Designer.cs">
+      <DependentUpon>Student.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddStu.resx">
+      <DependentUpon>AddStu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BaseForm.resx">
       <DependentUpon>BaseForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -79,6 +94,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Student.resx">
+      <DependentUpon>Student.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config" />
     <None Include="Properties\Settings.settings">
@@ -104,9 +122,19 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\20121006120705_EHCdw.thumb.600_0.jpeg" />
+    <Content Include="Resources\菱形 %281%29.png" />
+    <Content Include="Resources\菱形.png" />
+    <None Include="Resources\t01.png" />
+    <None Include="Resources\t02.png" />
+    <None Include="Resources\close1.png" />
+    <Content Include="Resources\修 改.png" />
+    <Content Include="Resources\删除／数字面板编辑态.png" />
+    <Content Include="Resources\学生管理 %281%29.png" />
+    <Content Include="Resources\学生管理.png" />
+    <Content Include="Resources\添加.png" />
+    <None Include="Resources\添加_1568084986.jpg" />
     <None Include="Resources\class1.jpg" />
     <Content Include="Resources\grade.jpg" />
-    <Content Include="Resources\class.jpg" />
     <None Include="Resources\Student.jpg" />
     <None Include="Resources\ClassManager.jpg" />
     <Content Include="Resources\login.jpg" />

@@ -36,7 +36,7 @@ namespace StudentManagement {
         this.closePicture.BackColor = Color.Transparent;
         }
         private void PictureBox1_Click(object sender, EventArgs e) {
-        Application.Exit();
+        this.Close();
         }
 
         private void minimizeBox_MouseHover(object sender, EventArgs e) {
@@ -49,7 +49,6 @@ namespace StudentManagement {
         private void minimizeBox_Click(object sender, EventArgs e) {
         this.WindowState = FormWindowState.Minimized;
         notifyIcon1.Visible = true;
-        this.Hide();
         }
         #endregion
 

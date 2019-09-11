@@ -27,9 +27,9 @@ namespace StudentManagement {
         Home.userName = userNameText.Text.Trim();
         this.Close();
 
-      /*  Home home = new Home(userNameText.Text.Trim());
-        this.Hide();
-        home.Show();*/
+        /*  Home home = new Home(userNameText.Text.Trim());
+          this.Hide();
+          home.Show();*/
         } else {
         MessageBox.Show("登录名或密码错误");
         this.pwdText.Clear();

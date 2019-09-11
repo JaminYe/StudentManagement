@@ -15,15 +15,14 @@ namespace DAL {
         /// <param name="parameters"></param>
         /// <returns></returns>
         public static int? ExecuteNonQuery(string sql, MySqlParameter[] parameters) {
-            using (MySqlConnection mySqlConnection = new MySqlConnection(connectionString)) {
+            using (MySqlConnection mySqlConnection = new MySqlConnection (connectionString)) {
                 try {
-                    mySqlConnection.Open();
-                    MySqlCommand mySqlCommand = new MySqlCommand(sql, mySqlConnection);
-                    mySqlCommand.Parameters.AddRange(parameters);
-                    return mySqlCommand.ExecuteNonQuery();
-                }
-                catch (Exception e) {
-                    Console.WriteLine("出现错误:{0}", e.Message);
+                    mySqlConnection.Open ();
+                    MySqlCommand mySqlCommand = new MySqlCommand (sql, mySqlConnection);
+                    mySqlCommand.Parameters.AddRange (parameters);
+                    return mySqlCommand.ExecuteNonQuery ();
+                } catch (Exception e) {
+                    Console.WriteLine ("出现错误:{0}", e.Message);
                 }
                 return null;
             }
@@ -35,19 +34,18 @@ namespace DAL {
         /// <param name="parameters"></param>
         /// <returns></returns>
         public static DataTable DataTable(string sql, params MySqlParameter[] parameters) {
-            using (MySqlConnection mySqlConnection = new MySqlConnection(connectionString)) {
+            using (MySqlConnection mySqlConnection = new MySqlConnection (connectionString)) {
                 try {
-                    mySqlConnection.Open();
-                    MySqlDataAdapter mySqlDataAdapter = new MySqlDataAdapter(sql, mySqlConnection);
-                    mySqlDataAdapter.SelectCommand.Parameters.AddRange(parameters);
-                    DataSet dataSet = new DataSet();
-                    mySqlDataAdapter.Fill(dataSet);
+                    mySqlConnection.Open ();
+                    MySqlDataAdapter mySqlDataAdapter = new MySqlDataAdapter (sql, mySqlConnection);
+                    mySqlDataAdapter.SelectCommand.Parameters.AddRange (parameters);
+                    DataSet dataSet = new DataSet ();
+                    mySqlDataAdapter.Fill (dataSet);
                     if (dataSet.Tables.Count > 0) {
                         return dataSet.Tables[0];
                     }
-                }
-                catch (Exception e) {
-                    Console.WriteLine("出现错误:{0}", e.Message);
+                } catch (Exception e) {
+                    Console.WriteLine ("出现错误:{0}", e.Message);
                 }
                 return null;
             }
@@ -61,15 +59,14 @@ namespace DAL {
         /// <param name="parameters">参数数组</param>
         /// <returns>数据条数</returns>
         public static object ExecuteScalar(string sql, MySqlParameter[] parameters) {
-            using (MySqlConnection mySqlConnection = new MySqlConnection(connectionString)) {
+            using (MySqlConnection mySqlConnection = new MySqlConnection (connectionString)) {
                 try {
-                    mySqlConnection.Open();
-                    MySqlCommand mySqlCommand = new MySqlCommand(sql, mySqlConnection);
-                    mySqlCommand.Parameters.AddRange(parameters);
-                    return mySqlCommand.ExecuteScalar();
-                }
-                catch (Exception e) {
-                    Console.WriteLine("出错了:{0}", e.Message + connectionString);
+                    mySqlConnection.Open ();
+                    MySqlCommand mySqlCommand = new MySqlCommand (sql, mySqlConnection);
+                    mySqlCommand.Parameters.AddRange (parameters);
+                    return mySqlCommand.ExecuteScalar ();
+                } catch (Exception e) {
+                    Console.WriteLine ("出错了:{0}", e.Message + connectionString);
                 }
 
                 return null;

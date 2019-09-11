@@ -43,19 +43,25 @@
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.button1.BackgroundImage = global::StudentManagement.Properties.Resources.Student;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.Color.Black;
             this.button1.Location = new System.Drawing.Point(28, 113);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(160, 80);
             this.button1.TabIndex = 3;
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // button2
             // 
             this.button2.BackgroundImage = global::StudentManagement.Properties.Resources.ClassManager;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Location = new System.Drawing.Point(246, 113);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(160, 80);
@@ -65,7 +71,9 @@
             // button3
             // 
             this.button3.BackgroundImage = global::StudentManagement.Properties.Resources.ProManager;
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Location = new System.Drawing.Point(462, 113);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(160, 80);
@@ -76,6 +84,8 @@
             // 
             this.button4.BackgroundImage = global::StudentManagement.Properties.Resources.class1;
             this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Location = new System.Drawing.Point(28, 267);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(160, 80);
@@ -85,7 +95,9 @@
             // button5
             // 
             this.button5.BackgroundImage = global::StudentManagement.Properties.Resources.grade;
-            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Location = new System.Drawing.Point(246, 267);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(160, 80);

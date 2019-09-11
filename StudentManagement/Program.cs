@@ -14,7 +14,6 @@ namespace StudentManagement {
         login.ShowDialog();
         if (login.DialogResult == DialogResult.OK) {
         Application.Run(new Home());
-
         }
         }
     }
